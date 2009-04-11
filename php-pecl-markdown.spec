@@ -10,7 +10,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	2572ee07e20e69b8d99aeccf016e19cc
 URL:		http://pecl.php.net/package/markdown/
-BuildRequires:	php-devel >= 3:5.2.0
+BuildRequires:	php-devel >= 4:5.2.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
