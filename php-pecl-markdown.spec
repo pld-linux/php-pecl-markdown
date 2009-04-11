@@ -9,11 +9,10 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
 # Source0-md5:	2572ee07e20e69b8d99aeccf016e19cc
-URL:		http://pecl.php.net/package/Modname/
-BuildRequires:	php-devel >= 3:5.0.0
+URL:		http://pecl.php.net/package/markdown/
+BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	rpmbuild(macros) >= 1.344
 %{?requires_php_extension}
-Requires:	php-common >= 4:5.0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
