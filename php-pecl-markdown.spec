@@ -1,14 +1,14 @@
 %define		_modname	markdown
-%define		_status		alpha
+%define		_status		stable
 Summary:	%{_modname} - a fast Markdown parser
 Summary(pl.UTF-8):	%{_modname} - szybki parser Markdown
 Name:		php-pecl-%{_modname}
-Version:	0.1.0
-Release:	3
-License:	PHP 3.01
+Version:	1.0.0
+Release:	1
+License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{_modname}-%{version}.tgz
-# Source0-md5:	2572ee07e20e69b8d99aeccf016e19cc
+# Source0-md5:	cc8e4575f63c5809dcb62d146a9d04eb
 URL:		http://pecl.php.net/package/markdown/
 BuildRequires:	php-devel >= 4:5.2.0
 BuildRequires:	rpmbuild(macros) >= 1.344
@@ -46,7 +46,7 @@ install -d $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d
 	EXTENSION_DIR=%{php_extensiondir}
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{_modname}.ini
 ; Enable %{_modname} extension module
-extension=%{_modname}.so
+extension=discount.so
 EOF
 
 %clean
@@ -62,6 +62,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CREDITS EXPERIMENTAL
+%doc CREDITS README
 %config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{_modname}.ini
-%attr(755,root,root) %{php_extensiondir}/%{_modname}.so
+%attr(755,root,root) %{php_extensiondir}/discount.so
