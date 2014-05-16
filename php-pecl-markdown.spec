@@ -5,7 +5,7 @@ Summary:	%{modname} - a fast Markdown parser
 Summary(pl.UTF-8):	%{modname} - szybki parser Markdown
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.0
-Release:	4
+Release:	5
 License:	New BSD
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -15,6 +15,7 @@ BuildRequires:	%{php_name}-devel >= 4:5.2.0
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
 Provides:	php(%{modname}) = %{version}
+Obsoletes:	php-pecl-markdown < 1.0.0-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
